@@ -26,9 +26,9 @@ public class ClazzTest {
 
         Clazz clazz = new Clazz();
 
-        Assertions.assertEquals(5,clazz.Add("1,5,6,8,10"));
-        Assertions.assertEquals(8,clazz.Add("11,12,555,96,0,6,7,80"));
-        Assertions.assertEquals(16,clazz.Add("1,5,6,8,10,1,2,4,7,8,5,9,6,3,2,5"));
+        Assertions.assertEquals(30,clazz.Add("1,5,6,8,10"));
+        Assertions.assertEquals(116,clazz.Add("11,12,0,6,7,80"));
+        Assertions.assertEquals(82,clazz.Add("1,5,6,8,10,1,2,4,7,8,5,9,6,3,2,5"));
         
 
     }
@@ -39,7 +39,8 @@ public class ClazzTest {
 
         Clazz clazz = new Clazz();
 
-        Assertions.assertEquals(5,clazz.Add("1\n5\n6\n8\n10"));
+        Assertions.assertEquals(30,clazz.Add("1\n5\n6\n8\n10"));
+        Assertions.assertEquals(50,clazz.Add("1\n5,6\n8,10\n20"));
 
     }
 

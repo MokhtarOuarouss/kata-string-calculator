@@ -11,14 +11,14 @@ public class Clazz {
             }
 
         String[] split_numbers = numbers.split("[,\n]");
-        int[] nbrs = new int[split_numbers.length];
-
+        
+        int sum = 0;
         for (int i = 0; i < split_numbers.length; i++) {
-            nbrs[i] = Integer.parseInt(split_numbers[i]);
+            sum  += Integer.parseInt(split_numbers[i]);
         }
         
 
 
-        return nbrs.length;
+        return sum;
     }
 }
