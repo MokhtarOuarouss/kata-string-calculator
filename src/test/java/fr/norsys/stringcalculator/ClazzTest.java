@@ -69,7 +69,7 @@ public class ClazzTest {
 
     @Test
     @DisplayName(" numbers begger than 1000 be ignored ")
-    public void negative_numbers() {
+    public void numbers_begger_than_1000() {
 
         Clazz clazz = new Clazz();
         Assertions.assertEquals(2,clazz.Add("//\n\n1001\n2"));
