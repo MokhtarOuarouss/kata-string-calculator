@@ -1,4 +1,5 @@
 package fr.norsys.stringcalculator;
+import java.util.*;
 
 
 public class Clazz {
@@ -28,9 +29,6 @@ public class Clazz {
             
         }
 
-    
-        
-
         else {
             split_numbers = numbers.split("[,\n]");
         }
@@ -38,12 +36,23 @@ public class Clazz {
         
         
         int sum = 0;
-        for (int i = 0; i < split_numbers.length; i++) {
-            sum  += Integer.parseInt(split_numbers[i]);
+        List<Integer> negativeNumbers = new ArrayList<>();
+
+        for (String numStr : split_numbers) {
+            int num = Integer.parseInt(numStr.trim());
+
+            if (num < 0) {
+                negativeNumbers.add(num);
+            } else {
+                 sum += num;
+            }
+        }
+
+        if (!negativeNumbers.isEmpty()) {
+            throw new IllegalArgumentException("Input must be positive: " + negativeNumbers);
         }
         
 
-
-        return sum;
+        else return sum;
     }
 }

@@ -44,6 +44,9 @@ public class ClazzTest {
 
     }
 
+            
+
+
     @Test
     @DisplayName("  support different delimiters  ")
     public void different_delimiters() {
@@ -54,5 +57,16 @@ public class ClazzTest {
         Assertions.assertEquals(6,clazz.Add("//,\n1,2,3"));
 
     }
+
+    @Test
+    @DisplayName("negative numbers not allowed ")
+    public void negative_numbers() {
+
+        Clazz clazz = new Clazz();
+        Assertions.assertThrows(IllegalArgumentException.class, () -> clazz.Add("1,5,-6,8,10"));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> clazz.Add("//,\n1,2,-3"));
+    }
+
+    
 
 }
