@@ -44,4 +44,15 @@ public class ClazzTest {
 
     }
 
+    @Test
+    @DisplayName("  support different delimiters  ")
+    public void different_delimiters() {
+
+        Clazz clazz = new Clazz();
+
+        Assertions.assertEquals(3,clazz.Add("//\n\n1\n2"));
+        Assertions.assertEquals(6,clazz.Add("//,\n1,2,3"));
+
+    }
+
 }
