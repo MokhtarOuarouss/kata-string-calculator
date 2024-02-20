@@ -67,6 +67,13 @@ public class ClazzTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> clazz.Add("//,\n1,2,-3"));
     }
 
-    
+    @Test
+    @DisplayName(" numbers begger than 1000 be ignored ")
+    public void negative_numbers() {
+
+        Clazz clazz = new Clazz();
+        Assertions.assertEquals(2,clazz.Add("//\n\n1001\n2"));
+        Assertions.assertEquals(5,clazz.Add("2001,2\n3"));
+    }
 
 }

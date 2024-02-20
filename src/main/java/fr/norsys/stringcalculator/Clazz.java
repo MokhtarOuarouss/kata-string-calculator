@@ -44,7 +44,7 @@ public class Clazz {
             if (num < 0) {
                 negativeNumbers.add(num);
             } else {
-                 sum += num;
+                if (num <= 1000) sum += num;
             }
         }
 
