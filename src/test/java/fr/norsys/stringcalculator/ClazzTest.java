@@ -33,4 +33,14 @@ public class ClazzTest {
 
     }
 
+    @Test
+    @DisplayName("  handle new line between numbers  ")
+    public void new_line_between_numbers() {
+
+        Clazz clazz = new Clazz();
+
+        Assertions.assertEquals(5,clazz.Add("1\n5\n6\n8\n10"));
+
+    }
+
 }
